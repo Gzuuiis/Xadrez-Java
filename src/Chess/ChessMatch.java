@@ -29,6 +29,7 @@ public class ChessMatch{
 		return mat;
 	}
 	
+	// AQUI DEFINIMOS AS PEÇAS E SUAS POSIÇÕES
 	private void initialSetup() {
 		
 		board.placePiece(new Rook(board, Color.WHITE), new Position(2, 1));
