@@ -49,6 +49,23 @@ public class Board {
 		
 	}
 	
+	public Piece removePiece(Position position) {
+		
+		if(!positionExists(position)) {
+			throw new BoardException("Posição não existente no tabuleiro.");
+		} 
+		if(piece(position) == null) {
+			return null;
+		}
+		Piece aux = piece(position);
+		aux.position = null;
+		pieces[position.getRow()][position.getColumn()] = null;
+		return aux;
+		
+		
+		
+	}
+	
 	//FUNÇÃO AUXILIAR PORQUE TERÁ MOMENTO QUE VAI SER MAIS FÁCIL VERIFICAR PELA LINHA E COLUNA
 	private boolean  positionExists(int row, int column) {
 		
